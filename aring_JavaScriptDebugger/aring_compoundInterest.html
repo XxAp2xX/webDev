@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Austin R">
+<title>Compound Interest</title>
+<style>
+    .grid {
+        display: inline-grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 6px 4px;
+        margin: 10px 0 20px 0;
+        text-align: right;
+    }
+    #deposit {width: 4em;}
+    #rate {width: 5em;}
+    #years {width: 2em;}
+    table {text-align: center;}
+    table, th, td {border: none;}
+    th, td {padding: 10px;}
+    th {
+        background-color: rgb(112, 25, 47);
+        color: rgb(255, 255, 255);
+    }
+    td {background-color: mistyrose;}
+</style>
+<script src=aring_compoundInterest.js></script>
+</head>
+<body>
+<h3>Compound Interest Calculator</h3>
+<form class="grid" id="input">
+    <label for="deposit">Initial deposit:</label>
+    <input type="number" id="deposit"
+    min="1" max="9999" step="1" required>
+    <span></span>
+    <label for="rate">Annual interest rate:</label>
+    <input type="number" id="rate"
+    min="0" max="100" step=".1" required>
+    <span>&nbsp;%</span>
+    <label for="years">Years to grow:</label>
+    <input type="number" id="years"
+    min="1" max="20" step="1" required>
+</form>
+<br>
+<input type="button" form="input" value="Generate compound interest"
+    onclick="generateTable(this.form);">
+<br><br>
+<div id="result"></div>
+</body>
+</html>

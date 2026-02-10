@@ -1,0 +1,76 @@
+1. Coding conventions make software more reliable, scalable, and professional.
+2. It says whitespace should be avoided, and is considered bad practice.
+3. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="John Dean">
+    <title>Mock Trial How-To</title>
+</head>
+<body>
+
+    <h1>Mock Trial Opening Statements</h1>
+    <hr>
+
+    <p>
+        <strong>Prosecuting Attorney:</strong><br>
+        Good morning, I am the prosecuting attorney, and I represent the State.
+        I will call three witnesses. At the conclusion of the case, we will ask
+        you to convict the defendant of the crime as charged. Thank you.
+    </p>
+
+    <p>
+        <strong>Defense Attorney:</strong><br>
+        Ladies and Gentlemen of the jury, I intend to prove that my client
+        xxxxxx is innocent of the alleged murder of yyyyyy, and the evidence
+        presented by the prosecution is circumstantial.
+    </p>
+
+</body>
+</html>
+
+4.
+<!--
+INVESTMENT INTELLIGENCE SYSTEMS CORP.
+THIS MATERIAL IS COPYRIGHTED AS AN UNPUBLISHED WORK UNDER
+SECTIONS 104 AND 408 OF TITLE 17 OF THE UNITED STATES CODE.
+UNAUTHORIZED USE, COPYING, OR OTHER REPRODUCTION IS PROHIBITED BY LAW.
+-->
+
+5. One interesting thing I found from Google’s SEO Starter Guide is the emphasis on creating content for users first, not search engines. 
+Google explains that pages should provide clear, useful, and original information that directly answers what users are searching for. 
+Instead of stuffing keywords unnaturally into a page like we might think, Google actually recommends writing content that reads naturally 
+and organizes information using headings, paragraphs, and descriptive titles. This way, it helps search engines better understand the page 
+while also improving the experience for human visitors at the same time, which ultimately leads to better rankings.
+
+6. The permitted contents of the blockquote element is flow content, br is empty, and q is phrasing.
+
+7. 
+<p>
+    <strong>Attention Walmart shoppers:</strong><br>
+    Christmas sales begin
+    <time datetime="2026-09-15T05:00">September 15 at 5 am</time>,
+    just in time for the holidays.
+</p>
+
+8.
+<p>
+    A <dfn><abbr title="Solid-State Drive">SSD</abbr></dfn> is a storage device that
+    stores data using flash memory instead of spinning magnetic disks.
+    An <dfn><abbr title="Solid-State Drive">SSD</abbr></dfn> is faster, quieter,
+    and more durable than a traditional hard disk drive.
+</p>
+
+9. The b, u, and i elements are included in the HTML standard for legacy compatibility and limited semantic use cases. Many older web pages 
+relied on these elements for presentation, and removing them would break existing content.
+
+10. 
+<p>
+    The ampersand symbol is "&amp;."&nbsp;&nbsp;The greater than or equal symbol is "&ge;2."
+</p>
+
+11.
+<p>
+    <var>x</var> = ( -<var>b</var> &plusmn; &radic;( <var>b</var><sup>2</sup> - 4<var>a</var><var>c</var> ) ) / 2<var>a</var>
+</p>

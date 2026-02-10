@@ -1,0 +1,33 @@
+1. Github Pages is free and i can make my own custom domain with no extra cost. It is best for if you want to host a simple static portfolio, documentation site, or project showcase.
+2. Chorme, Firefox, and Edge
+3. https tells your browser how to communicate with the server.
+    mars is the subdomain.
+    jpl.nasa.gov is the domain name.
+    msl/images is the path.
+    PIA16082_Mitrofanov1F-thm.jpg is the file name.
+4. a container element has an opening and closing tag with content inbetween, while a void element doesn't have a closing tag and doesn't contain any content.
+5. Its main purpose is to make sure the browser is displaying the page correctly and consistently.
+6. a) the </strong> tag needed to be inside the <p> tag instead of outside
+    b) 
+    <p>
+    <strong> What a magical world we live in! </strong>
+    </p>
+7. 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spanish Quote Example</title>
+    </head>
+    <body>
+        <p lang="es">
+            La muerte no existe, la gente solo muere cuando la olvidan; 
+            si puedes recordarme, siempre estaré contigo.
+        </p>
+    </body>
+</html>
+
+8. a <p> is meant for paragraphs of text while a <div> is just a generic container for structural grouping
+9. He is the primary editor and "driving force" behind HTML5
+10. One thing i found on the W3C site is the WoT (aka Web of Things). Its main goal is to make IoT (Internet of Things) devices work together in a standardized way.
+11. The 2 problems are that the <! DOCTYPE html> should be <!DOCTYPE html> and that there is no such thing as <h7> - it only goes to h6.

@@ -1,0 +1,31 @@
+1. a
+2. It doesn't start a new line, it has no meaning on its own, and it is good for applying styles to small parts without affecting the document layout
+3. 
+<style>
+    h1 {
+        color: blue;
+    }
+    .dynasty {
+        text-decoration: underline;
+    }
+
+    <p>
+        Around 8000 B.C., the great <span class="dynasty">Chihuahua Dynasty</span> ruled the world.
+        What happened to this ancient civilization?
+    </p>
+
+4. 2^8 = 256. Red, Green, and Blue each have 256 values. 256 * 256 * 256 = 16,777,216
+5. 
+.christmas {
+    color: hsla(120, 50%, 45%, 0.8);
+    background-color: hsl(30, 60%, 80%);
+}
+
+6. There is only one font listed, so if a computer doesn't have that font there aren't any backups.
+7. 
+.fun-font {
+    font-family: Cracked, "Comic Sans MS", cursive;
+}
+
+8. You shouldn't include units when the value is zero for cleaner looking code. Zeros must still be specified in color functions, leaving one out can have a different result than intended
+9. There can't be a space between the number and the px, it must be like this: 4px
