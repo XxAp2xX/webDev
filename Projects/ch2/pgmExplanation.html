@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Austin R">
+        <title>Snake Game Program Explanation</title>
+    </head>
+
+    <body>
+
+        <h1>How the Snake Game Processes Player Movement</h1>
+
+        <p>
+            This web page explains a portion of a Python-based Snake game that handles
+            player input, snake movement, and collision detection. The program runs
+            continuously inside a <em>game loop</em> as long as the variable
+            <var>snakeAlive</var> remains true.
+        </p>
+
+        <p>
+            The program listens for keyboard input using the
+            <code>getkey</code> function and stores the result in the variable
+            <var>key</var>. Arrow key input changes the value of the
+            <var>direction</var> variable, while pressing
+            <kbd>q</kbd> immediately ends the game.
+        </p>
+
+        <h2>Code Fragment</h2>
+
+        <p>
+            The following segment of code is from my final project in my Python class I made in the Fall of 2025. 
+            It shows how user input controls the snake and how the game responds to collisions and fruit collection.
+        </p>
+
+        <pre><code>
+    while snakeAlive:
+        try:
+            key = stdscr.getkey()
+        except:
+            key = None
+
+        if key == "KEY_LEFT" and direction != "RIGHT":
+            direction = "LEFT"
+        elif key == "KEY_RIGHT" and direction != "LEFT":
+            direction = "RIGHT"
+        elif key == "KEY_UP" and direction != "DOWN":
+            direction = "UP"
+        elif key == "KEY_DOWN" and direction != "UP":
+            direction = "DOWN"
+        elif key == "q":
+            snakeAlive = False
+            break
+        </code></pre>
+
+        <p>
+            Once the <var>direction</var> is set, the program updates the snake’s head
+            position by modifying the <var>x</var> and <var>y</var> coordinates.
+            For example, moving left subtracts from <var>x</var>, while moving down
+            adds to <var>y</var>. If the snake reaches a border, the output of the
+            program is a <samp>game over</samp> condition.
+        </p>
+
+        <p>
+            When the snake’s head reaches the fruit coordinates stored in
+            <var>fruitX</var> and <var>fruitY</var>, the program increases both
+            <var>snakeLength</var> and <var>score</var>. This causes the snake to grow
+            and shows the player how far they have progressed!
+        </p>
+
+        <p>
+            One useful acronym related to this program is
+            <dfn><abbr title="Frames Per Second">FPS</abbr></dfn>,
+            which describes how frequently the game loop updates the screen and processes
+            input.
+        </p>
+
+        <p>
+            As one fictional programming book explains,
+            <cite>Games, Loops, and Logic</cite> notes,
+            <blockquote>
+                <q>A simple loop combined with clear conditions can create complex and
+                engaging gameplay.</q>
+            </blockquote>
+        </p>
+
+        <p>
+            This portion of the code for my Snake game demonstrates how continuous input, conditional logic,
+            and list manipulation work together to create an interactive program. Even this 
+            small of a section of code can control movement, detect collisions, and determine
+            when the game should end.
+        </p>
+
+    </body>
+</html>
