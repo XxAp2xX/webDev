@@ -1,0 +1,159 @@
+1. 
+table {
+    border-collapse: collapse;
+}
+
+2. add this within the <table>, before the <caption>
+<colgroup>
+        <col class="account">
+    </colgroup>
+
+    <colgroup span="2" class="money"></colgroup>
+
+    <colgroup>
+        <col class="remaining">
+    </colgroup>
+
+and this within the <style>
+.account {
+    background-color: white;
+}
+
+.money {
+    background-color: #e6f2ff;
+}
+
+.remaining {
+    background-color: lightskyblue;
+}
+
+3. A pseudo-class allows you to style an element based on its state or position in the document.
+
+4. li:nth-of-type(1)
+
+5. Modified table:
+<tbody>
+    <tr><th>2021</th><td>8</td><td>58.55</td></tr>
+    <tr><th>2020</th><td>3</td><td>58.81</td></tr>
+    <tr><th>2019</th><td>4</td><td>58.76</td></tr>
+    <tr><th>2018</th><td>8</td><td>58.55</td></tr>
+</tbody>
+
+<tbody class="recentYears">
+    <tr><th>2023</th><td>1</td><td>58.85</td></tr>
+    <tr><th>2022</th><td>7</td><td>58.64</td></tr>
+</tbody>
+
+CSS rule:
+.recentYears th,
+.recentYears td {
+    color: red;
+}
+
+6. Modified table with id attributes & added header attribute:
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="John Dean">
+        <title>Earth Eras</title>
+        <style>
+            table {border: thin solid;}
+            th, td {border: thin solid; padding: 10px;}
+            thead th {background-color: lawngreen;}
+            tbody th {background-color: lightcyan;}
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>My Favorite Eras</caption>
+            <thead>
+                <tr>
+                    <th id="eras">Eras</th>
+                    <th id="events" colspan="2">Events</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="mesozoic" headers="eras" rowspan="2">
+                        Mesozoic<br>251 to 65.5 mya
+                    </th>
+                    <td headers="mesozoic events">
+                        Evolutionary split between reptiles and dinosaurs
+                    </td>
+                    <td headers="mesozoic events">
+                        235 mya
+                    </td>
+                </tr>
+
+                <tr>
+                    <td headers="mesozoic events">
+                        South America breaks away from Africa
+                    </td>
+                    <td headers="mesozoic events">
+                        105 mya
+                    </td>
+                </tr>
+
+                <tr>
+                    <th id="cenozoic" headers="eras" rowspan="3">
+                        Cenozoic<br>65.5 mya to today
+                    </th>
+                    <td headers="cenozoic events">
+                        Modern mammals appear
+                    </td>
+                    <td headers="cenozoic events">
+                        40 mya
+                    </td>
+                </tr>
+
+                <tr>
+                    <td headers="cenozoic events">
+                        Tool-making humanoids appear
+                    </td>
+                    <td headers="cenozoic events">
+                        2 mya
+                    </td>
+                </tr>
+
+                <tr>
+                    <td headers="cenozoic events">
+                        First Rolling Stones reunion tour
+                    </td>
+                    <td headers="cenozoic events">
+                        11,000 years ago
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+7. HTML:
+<footer>
+    <p>
+        Antiquity Preservation Society |
+        30 Rockefeller Plaza, New York, NY 10112 |
+        (212) 588-8601
+    </p>
+</footer>
+
+CSS:
+footer {
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+8.
+.grid > *:nth-child(even) {
+    background-color: red;
+    color: white;
+}
+
+9.
+.porcupine-picture {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
