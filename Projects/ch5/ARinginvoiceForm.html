@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Austin R">
+        <title>Customer Order Form</title>
+        <style>
+        h1 {
+            text-align: center;
+            color: purple;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 40% 20% 20% 20%;
+            grid-template-rows:
+                3em
+                3em
+                3em
+                repeat(4, 3em)
+                2em
+                3em 3em 3em 3em;
+            border: 1px solid blue;
+            width: 600px;
+            margin: 0 auto;
+        }
+        .grid > * {
+            border: 1px solid blue;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .full {
+            grid-column: 1 / span 4;
+        }
+        .divider {
+            grid-column: 1 / span 4;
+            background-color: black;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Customer Order Form</h1>
+        <div class="grid">
+            <span class="full">Order Number</span>
+            <span class="full">Order Date</span>
+            <span><strong>Product Name</strong></span>
+            <span><strong>Color</strong></span>
+            <span><strong>Quantity</strong></span>
+            <span><strong>Price</strong></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span class="divider"></span>
+            <span class="full">Subtotal</span>
+            <span class="full">Tax</span>
+            <span>Shipping</span>
+            <span></span>
+            <span></span>
+            <span>5.95</span>
+            <span class="full">Total</span>
+        </div>
+    </body>
+</html>

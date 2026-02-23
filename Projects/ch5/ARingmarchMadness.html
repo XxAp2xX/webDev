@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Austin R">
+    <title>March Madness</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+            width: 900px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        .wrapper > div {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .center-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows:
+                3em
+                2em
+                repeat(5, 1.2em);
+            gap: 2px;
+        }
+        .month {
+            grid-column: 1 / span 7;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .day {
+            font-weight: bold;
+        }
+        .calendar span:nth-child(n + 25) {
+            background-color: gold;
+        }
+        .calendar span:nth-child(n + 41) {
+            background-color: transparent;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="left center-flex">
+                MARCH<br>MADNESS
+            </div>
+            <div>
+                <div class="calendar">
+                    <div class="month center-flex">March</div>
+                    <span class="day">Sun</span><span class="day">Mon</span><span class="day">Tue</span>
+                    <span class="day">Wed</span><span class="day">Thu</span><span class="day">Fri</span><span class="day">Sat</span>
+                    <span></span>
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                    <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+                    <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                    <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+                    <span>28</span><span>29</span><span>30</span><span>31</span>
+                </div>
+            </div>
+            <div>
+                <h2>Hannibal LaGrange University</h2>
+                <p>
+                    HLG our Alma Mater, <br>
+                    HLG we will be true, <br>
+                    Every Son and Every Daughter, <br>
+                    To the Scarlet and the Blue...
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
