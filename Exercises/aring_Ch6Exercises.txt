@@ -1,0 +1,52 @@
+1.
+<a href="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat_in_car.jpg" download>
+Download image of a cat driving a car
+</a>
+
+2.
+<a href="../benefits/workFromHomePolicy.html">
+Work From Home Policy
+</a>
+
+3. It is relative because it depends on the domain name, but it starts from the website's root, so it is also absolute.
+
+4.
+<a href="#drivers">Drivers education classes</a>
+<h4 id="drivers">Drivers education classes</h4>
+
+5.
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: darkgreen;
+}
+
+a:visited {
+    color: pink;
+}
+
+6.
+
+60px – fixed width of the "grid-template-columns"
+1.5fr – 1.5 parts of remaining free space
+1.5fr – another 1.5 parts of remaining free space
+3fr – 3 parts of remaining free space (largest column)
+1.5 + 1.5 + 3 = 6 parts total
+
+7. 
+aside {
+    grid-area: aside;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+}
+
+8. 256 (0-255)
