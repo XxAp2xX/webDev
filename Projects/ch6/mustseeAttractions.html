@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Austin R">
+        <title>Must-See Attractions</title>
+        <style>
+            .noUnderline{
+                text-decoration: none;
+            }
+            a{
+                font-weight: bold;
+            }
+            a:hover{
+                background-color:silver;
+            }
+            img{
+                width:600px;
+            }
+            .grid{
+                display:grid;
+                grid-template-columns:150px auto;
+                gap:10px;
+            }
+            .city{
+                font-weight: none;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Must-See Attractions</h1>
+        <a href="#stl" class="noUnderline">St. Louis</a> | <a href="#chicago" class="noUnderline">Chicago</a> | <a href="#sedona" class="noUnderline">Sedona</a>
+        <br><br>
+        <img src="SedonaChapel.png" alt="Chapel of the Holy Cross in Sedona, Arizona">
+        <br>
+        <h3><b>I have visited all of these places!</b></h3>
+        <ul>
+            <li>I live 45ish minutes away from STL, so I go fairly often.</li>
+            <li>In fourth grade I went to Chicago.</li>
+            <li>Sedona was the most recent visit, being in January 2026.</li>
+        </ul>
+        <br>
+        <div class="grid">
+            <div class="city" id="stl">St. Louis:</div>
+            <div>
+                <a href="https://www.gatewayarch.com/">Gateway Arch</a><br>
+                <a href="https://citymuseum.org/">City Museum</a><br>
+                <a href="https://fitzsrootbeer.com/">Fitz's Root Beer</a>
+            </div>
+            <div class="city" id="chicago">Chicago:</div>
+            <div>
+                <a href="https://www.choosechicago.com/articles/tours-and-attractions/the-bean-chicago/">Cloud Gate (The Bean)</a><br>
+                <a href="https://www.sheddaquarium.org/">Shedd Aquarium</a><br>
+                <a href="https://theskydeck.com/">Willis Tower Skydeck</a>
+            </div>
+            <div class="city" id="sedona">Sedona:</div>
+            <div>
+                <a href="https://www.alltrails.com/trail/us/arizona/cathedral-rock-trail">Cathedral Rock</a><br>
+                <a href="https://chapeloftheholycross.com/">Chapel of the Holy Cross</a><br>
+                <a href="https://lovencontracting.com/why-are-mcdonalds-arches-turquoise-in-sedona-arizona/">Teal McDonald's</a>
+            </div>
+        </div>
+    </body>
+</html>
