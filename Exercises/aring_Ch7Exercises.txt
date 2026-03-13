@@ -1,0 +1,87 @@
+1. 
+<img src="leavenworth.jpg" alt="Leavenworth, Washington" class="photo-right">
+
+2.
+.photo-right {
+    float: right;
+    margin-left: 12px;
+}
+
+3. 
+.block-image {
+    display: block;
+}
+
+4. 
+<img src="kangaroo-sprite.png" alt="Kangaroo" class="roo">
+.roo {
+    width: 120px;
+    height: 120px;
+    object-fit: none;
+    object-position: 0 0;
+}
+
+.roo:hover {
+    object-position: -120px 0;
+}
+
+5.
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 1.2em;
+    margin: 12px;
+    transition: all 0.4s linear 0s;
+}
+
+a:active {
+    color: inherit;
+}
+
+6. 
+.tracer:focus {
+    background-color: orange;
+    animation: trace 4s linear forwards;
+}
+
+@keyframes trace {
+    0% {
+        left: 20px;
+        top: 20px;
+    }
+
+    25% {
+        left: 370px;
+        top: 20px;
+    }
+
+    50% {
+        left: 370px;
+        top: 170px;
+    }
+
+    75% {
+        left: 20px;
+        top: 170px;
+    }
+
+    100% {
+        left: 20px;
+        top: 20px;
+    }
+}
+
+7.
+.honey-bunny {
+    background-image: url("goldenLagomorph.jpg");
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+8. controls
+
+9.
+background-image: radial-gradient(circle, purple, blue);
