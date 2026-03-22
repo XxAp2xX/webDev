@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="John Dean">
+<title>Buddy the Dog</title>
+<style>
+  body::after {
+    content: url("../images/buddyParty.png");
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+<h1>My Best Friend</h1>
+<p>
+  Meet Buddy. Here he is posting pictures of his recent
+  trip to the park. In October, Buddy turned the big
+  zero three, which is 21 in human years. Look out, doggie
+  distilleries! Move your mouse over his picture to see
+  him at his birthday bash.
+</p>
+<img src="../images/buddyAtWork.jpg"
+  width="300" height="250" alt="Buddy"
+  onmouseover =
+    "this.src='../images/buddyParty.png';"
+  onmouseout = "this.src='../images/buddyAtWork.jpg';">
+</body>
+</html>

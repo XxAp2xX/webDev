@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="John Dean">
+<title>Renewable Energy Proposal</title>
+<style>
+    h3 {text-align: center;}
+    table {border-collapse: collapse; margin: 0 auto;}
+    th, td {border: thin solid; padding: 2px 5px;}
+    form {text-align: center;}
+    textarea {vertical-align: top; padding: 5px;}
+    .button {font-size: 16px;}
+</style>
+<script>
+    function evaluateProposal(form)
+    {
+        document.getElementById("status").innerHTML = "Submitted";
+        // Insert code here to evaluate the proposal and update the status message accordingly.
+        var costSC = parseFloat(form.elements["costSC"].value);
+        // End evaluateProposal
+        var janKWH = parseFloat(form.elements["jan"].value);
+        // Insert code here to evaluate the proposal and update the status message accordingly.
+    }
+</script>
+</head>
+
+<body>
+<form>
+<h3>Renewable Energy Proposal</h3>
+<table>
+  <caption>
+    (Cost $ is total cost to procure and install equipment - omit commas)
+  </caption>
+  <tr>
+    <th>Component Description</th> <th>Size Description</th>
+    <th>Size</th> <th>Max kW</th> <th>Cost $</th>
+  </tr>
+  <tr>
+    <td>PV Solar Generation</td> <td>m<sup>2</sup> panel area</td>
+    <td><input type="text" id="sizeSC" style="text-align:right" size="3"></td>
+    <td><input type="text" id="powSC" style="text-align:right" size="3"></td>
+    <td><input type="text" id="costSC" style="text-align:right" size="4"></td>
+  </tr>
+  <tr>
+    <td>Electrical Consumption</td> <td>m<sup>2</sup> floor area</td> 
+    <td><input type="text" id="sizeEC" style="text-align:right" size="3"></td>
+    <td><input type="text" id="powEC" style="text-align:right" size="3"></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>Cold or Hot Water Storage</td> <td>m<sup>3</sup> volume</td>
+    <td><input type="text" id="sizeWS" style="text-align:right" size="3"></td>
+    <td><input type="text" id="powWS" style="text-align:right" size="3"></td>
+    <td><input type="text" id="costWS" style="text-align:right" size="4"></td>
+  </tr>
+  <tr>
+    <td>Battery Storage</td> <td>kilogram weight</td>
+    <td><input type="text" id="sizeBS" style="text-align:right" size="3"></td>
+    <td><input type="text" id="powBS" style="text-align:right" size="3"></td>
+    <td><input type="text" id="costBS" style="text-align:right" size="4"></td>
+  </tr>
+</table>
+<br>Last Year's Cumulative Monthly Electrical Consumption in kWH:<br>
+  <input type="text" id="jan" placeholder="Jan" size="2">
+  <input type="text" id="feb" placeholder="Feb" size="2">
+  <input type="text" id="mar" placeholder="Mar" size="2">
+  <input type="text" id="apr" placeholder="Apr" size="2">
+  <input type="text" id="may" placeholder="May" size="2">
+  <input type="text" id="jun" placeholder="Jun" size="2">
+  <input type="text" id="jul" placeholder="Jul" size="2">
+  <input type="text" id="aug" placeholder="Aug" size="2">
+  <input type="text" id="sep" placeholder="Sep" size="2">
+  <input type="text" id="oct" placeholder="Oct" size="2">
+  <input type="text" id="nov" placeholder="Nov" size="2">
+  <input type="text" id="dec" placeholder="Dec" size="2">
+  <br>
+  Daily start hour & finish hour, each in range (0-2400):&nbsp; 
+  <input type="text" id="hour1" size="2">
+  <input type="text" id="hour2" size="2"><br>
+  Weekly days per week in range (0.0-7.0):&nbsp; 
+  <input type="text" id="days" size="2"><br>
+  Yearly start day & finish day, each in range (1-365):&nbsp;
+  <input type="text" id="month1" size="2">
+  <input type="text" id="month2" size="2"><br>
+  Lighting lumens per Watt:&nbsp; 
+  <input type="text" id="lighting" size="2"><br>
+  Type of Heating:&nbsp; <select id="heating">
+    <--! Insert Options here-->
+  </select><br>
+  <br>
+  <--!Insert the label and textbox code here-->
+  <br> <br>
+  <--! Insert Button and display message infor here-->
+<--! End form here -->
+</body>
+</html>
