@@ -1,0 +1,70 @@
+1. 
+@media (max-width: 480px) {
+    header { font-size: 1em; }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+    header { font-size: 1.5em; }
+}
+
+@media (min-width: 801px) {
+    header { font-size: 2em; }
+}
+
+2.
+For mobile, the code places each grid item in its own row
+@media (max-width: 480px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto auto 1fr auto;
+        grid-template-areas:
+            "banner"
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+}
+
+For non-mobile it has nav and main in the same line
+@media (min-width: 481px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 200px auto 1fr auto;
+        grid-template-areas:
+            "banner banner"
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+}
+
+3. display: none;
+
+4. It is because the nav list is a flex container and the media query changes its flex direction.
+
+5. DNF
+
+6. 
+item 1 = 480px
+item 2 = 160px
+
+7. 
+<style>
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+
+    main {
+        flex: 1 1 400px;
+    }
+
+    nav {
+        flex: 0 0 200px;
+    }
+</style>
