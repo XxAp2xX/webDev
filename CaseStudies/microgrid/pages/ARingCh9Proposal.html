@@ -86,12 +86,18 @@
   Lighting lumens per Watt:&nbsp; 
   <input type="text" id="lighting" size="2"><br>
   Type of Heating:&nbsp; <select id="heating">
-    <--! Insert Options here-->
+    <option>none</option>
+    <option>Fossil Fuel</option>
+    <option>Electric Resistance</option>
+    <option>Electric Heat Pump</option>
   </select><br>
   <br>
-  <--!Insert the label and textbox code here-->
+  <label for="name">Local Company Name and Address:</label>
+  <textarea id="name" rows="3" cols="33"></textarea>
   <br> <br>
-  <--! Insert Button and display message infor here-->
-<--! End form here -->
+  <input type="button" class="button" value="Submit Proposal" 
+    onclick="evaluateProposal(form);">
+    <h3 id="status"></h3>
+</form>
 </body>
 </html>
