@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Your Name">
+    <title>Sentence Builder</title>
+
+    <style>
+        @font-face {
+            font-family: "MyCursive";
+            src: url("fonts/mycursive.woff") format("woff"),
+                 url("fonts/mycursive.ttf") format("truetype");
+        }
+
+        body {
+            font-family: serif;
+            margin: 30px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 160px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        #sentence {
+            font-family: "MyCursive", cursive;
+            font-size: 1.8em;
+            color: #cc6666;
+        }
+
+        noscript {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        "use strict";
+
+        let sentence = "";
+
+        function addWord() {
+            let textbox = document.getElementById("wordBox");
+            let promptLabel = document.getElementById("prompt");
+            let output = document.getElementById("sentence");
+            let word = textbox.value;
+
+            if (sentence === "") {
+                sentence = word;
+                promptLabel.innerHTML = "Next word for your sentence:";
+            }
+            else {
+                sentence = sentence + " " + word;
+            }
+
+            output.innerHTML = sentence;
+            textbox.value = "";
+            textbox.focus();
+        }
+
+        function startOver() {
+            let textbox = document.getElementById("wordBox");
+            let promptLabel = document.getElementById("prompt");
+            let output = document.getElementById("sentence");
+
+            sentence = "";
+            output.innerHTML = "";
+            promptLabel.innerHTML = "Starting word for your sentence:";
+            textbox.value = "";
+            textbox.focus();
+        }
+
+        function setFocus() {
+            document.getElementById("wordBox").focus();
+        }
+    </script>
+</head>
+
+<body onload="setFocus()">
+    <noscript>
+        Warning: This web page works correctly only when JavaScript is enabled.
+    </noscript>
+
+    <h1>Sentence Builder</h1>
+
+    <form action="#">
+        <label id="prompt" for="wordBox">Starting word for your sentence:</label>
+        <input type="text" id="wordBox" name="wordBox">
+
+        <div class="buttons">
+            <input type="button" value="Add Word" onclick="addWord()">
+            <input type="button" value="Start Over" onclick="startOver()">
+        </div>
+    </form>
+
+    <div id="sentence"></div>
+</body>
+</html>
