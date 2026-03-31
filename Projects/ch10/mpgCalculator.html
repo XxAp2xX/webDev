@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="author" content="Austin R">
+   <title>MPG Calculator</title>
+
+   <style>
+      body {
+         font-family: Georgia, "Times New Roman", serif;
+         margin: 30px;
+      }
+      h1 {
+         margin-bottom: 20px;
+      }
+      p {
+         max-width: 800px;
+      }
+      form {
+         margin-top: 20px;
+      }
+      label {
+         display: inline-block;
+         width: 230px;
+         margin-bottom: 12px;
+      }
+      input {
+         width: 100px;
+         margin-bottom: 12px;
+      }
+      .buttons {
+         margin-top: 10px;
+      }
+      .buttons input {
+         width: auto;
+         margin-right: 10px;
+      }
+   </style>
+</head>
+<body>
+   <h1>Miles Per Gallon Calculator</h1>
+
+   <p>
+      The next two times you go to the gas station, fill up your tank completely and
+      record your odometer's mileage values. At the second fill-up, record the number
+      of gallons purchased. Then enter your three recorded values below and click the
+      <em>Calculate</em> button.
+   </p>
+
+   <form id="mpgForm" action="#">
+      <div>
+         <label for="firstMiles">First odometer reading (in miles):</label>
+         <input type="number" id="firstMiles" min="0" max="400000" step="1">
+      </div>
+
+      <div>
+         <label for="secondMiles">Second odometer reading (in miles):</label>
+         <input type="number" id="secondMiles" min="0" max="400000" step="1">
+      </div>
+
+      <div>
+         <label for="gallons">Gallons:</label>
+         <input type="number" id="gallons" min="0.1" max="40" step="0.1">
+      </div>
+
+      <div>
+         <label for="mpg">Calculated MPG:</label>
+         <input type="text" id="mpg" disabled>
+      </div>
+
+      <div class="buttons">
+         <input type="button" id="calculate" value="Calculate">
+         <input type="reset" id="reset" value="Reset">
+      </div>
+   </form>
+
+   <script>
+      const firstMiles = document.getElementById("firstMiles");
+      const secondMiles = document.getElementById("secondMiles");
+      const gallons = document.getElementById("gallons");
+      const mpg = document.getElementById("mpg");
+      const calculate = document.getElementById("calculate");
+      const mpgForm = document.getElementById("mpgForm");
+
+      calculate.addEventListener("click", function () {
+         let errorMessages = [];
+
+         mpg.value = "";
+
+         const firstValue = Number(firstMiles.value);
+         const secondValue = Number(secondMiles.value);
+         const gallonsValue = Number(gallons.value);
+
+         if (
+            firstMiles.value === "" ||
+            !Number.isInteger(firstValue) ||
+            firstValue < Number(firstMiles.min) ||
+            firstValue > Number(firstMiles.max)
+         ) {
+            errorMessages.push(
+               "Invalid entry for the first odometer reading. Must be an integer between " +
+               firstMiles.min + " and " + firstMiles.max + "."
+            );
+         }
+
+         if (
+            secondMiles.value === "" ||
+            !Number.isInteger(secondValue) ||
+            secondValue < Number(secondMiles.min) ||
+            secondValue > Number(secondMiles.max)
+         ) {
+            errorMessages.push(
+               "Invalid entry for the second odometer reading. Must be an integer between " +
+               secondMiles.min + " and " + secondMiles.max + "."
+            );
+         }
+
+         if (
+            gallons.value === "" ||
+            gallonsValue < Number(gallons.min) ||
+            gallonsValue > Number(gallons.max) ||
+            !/^\d+(\.\d)?$/.test(gallons.value)
+         ) {
+            errorMessages.push(
+               "Invalid entry for gallons. Must be between " +
+               gallons.min + " and " + gallons.max +
+               " with a maximum of one decimal place."
+            );
+         }
+
+         if (
+            errorMessages.length === 0 &&
+            firstValue > secondValue
+         ) {
+            errorMessages.push(
+               "Invalid odometer entries. The first value cannot be greater than the second value."
+            );
+         }
+
+         if (errorMessages.length > 0) {
+            alert(errorMessages.join("\n\n"));
+         }
+         else {
+            const milesDriven = secondValue - firstValue;
+            const mpgValue = milesDriven / gallonsValue;
+            mpg.value = mpgValue.toFixed(1);
+         }
+      });
+
+      mpgForm.addEventListener("reset", function () {
+         mpg.value = "";
+      });
+   </script>
+</body>
+</html>
