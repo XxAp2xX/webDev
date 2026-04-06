@@ -10,11 +10,12 @@
     </style>
     <script>
       function resetHeading() {
-        var paramString = location.search.substring(1);
-        if (paramString.length > 0) {
-          document.getElementById("heading").innerHTML = 
-          decodeURIComponent(paramString);
+        var thisHeading = document.getElementById("heading");
+        var param = sessionStorage.getItem("heading");
+        if (param != null) {
+          thisHeading.innerHTML = param;
         }
+        sessionStorage.removeItem("heading");
       }
     </script>
   </head>
@@ -34,7 +35,7 @@
             <li><a href="ARingCh5TypicalProperty.html">Typical Property</a></li>
             <li><a href="ARingCh6LocalEnergy.html">Local Energy</a></li>
             <li><a href="ARingCh10CollectorPerformance.html">Collector Performance</a></li>
-            <li><a href="#">Electric Power Services</a></li>
+            <li><a href="ARingCh10Services.html">Electric Power Services</a></li>
             <li><a href="#">Downtown Properties</a></li>
             <li><a href="#">Solar Shadowing</a></li>
           </ul>

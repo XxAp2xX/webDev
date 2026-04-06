@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="author" content="John Dean">
+<meta name="author" content="Austin Ring">
 <title>Collector Performance</title>
 <link rel="stylesheet" href="../library/microgrid.css">
 <style>
@@ -30,13 +30,13 @@
     row = table.insertRow(table.rows.length);
     form = solarForm;
     computeAngles();  // for altitude and cosIncidenceAngle
-    row.insertcell(0).innerHTML = form.elements["latitude"].value;
-    row.insertcell(1).innerHTML = form.elements["panelSlope"].value;
-    row.insertcell(2).innerHTML = form.elements["ratedWatts"].value;
+    row.insertCell(0).innerHTML = form.elements["latitude"].value;
+    row.insertCell(1).innerHTML = form.elements["panelSlope"].value;
+    row.insertCell(2).innerHTML = form.elements["ratedWatts"].value;
     monthIndex = form.elements["months"].selectedIndex;
-    row.insertcell(3).innerHTML =
-      document.getElementsByTagName("option") [monthIndex].innerHTML;
-    row.insertcell(4).innerHTML = findWatts();
+    row.insertCell(3).innerHTML =
+      document.getElementsByTagName("option")[monthIndex].innerHTML;
+    row.insertCell(4).innerHTML = findWatts();
   } // end calc
 
   function computeAngles() {
