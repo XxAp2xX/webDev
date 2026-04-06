@@ -18,22 +18,24 @@
   }
 </style>
 <script>
-  var form;
-  var altitude;
-  var cosIncidenceAngle;
+  var form;  //html element
+  var altitude;  //solar angle above horizon
+  var cosIncidenceAngle;  //perpendiculat component of radiation
+
   function calc(solarForm) {
-    var table;
-    var row;
-    var monthIndex;
+    var table;  //table of computed performance values
+    var row;  // row in displayed table of calculated values
+    var monthIndex;  //index of selected month
     table = document.getElementById("performance");
+    row = table.insertRow(table.rows.length);
     form = solarForm;
-    computeAngles();
+    computeAngles();  // for altitude and cosIncidenceAngle
     row.insertcell(0).innerHTML = form.elements["latitude"].value;
     row.insertcell(1).innerHTML = form.elements["panelSlope"].value;
     row.insertcell(2).innerHTML = form.elements["ratedWatts"].value;
     monthIndex = form.elements["months"].selectedIndex;
     row.insertcell(3).innerHTML =
-      document.getElementByTagName("option")[monthIndex].innerHTML;
+      document.getElementsByTagName("option") [monthIndex].innerHTML;
     row.insertcell(4).innerHTML = findWatts();
   } // end calc
 
