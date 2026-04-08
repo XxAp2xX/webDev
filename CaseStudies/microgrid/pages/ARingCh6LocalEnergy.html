@@ -8,7 +8,7 @@
     <style>
       img {float: right; margin-left: 20px; width: 30%;}
     </style>
-    <script>
+    <script src="../library/navigation.js">
       function resetHeading() {
         var thisHeading = document.getElementById("heading");
         var param = sessionStorage.getItem("heading");
@@ -20,7 +20,7 @@
     </script>
   </head>
 
-  <body onload="resetHeading();">
+  <body onload="resetHeading();" onload="createHeaderFooter();">
     <h2 id="heading">
       Local Renewable Energy, Cogeneration, and Energy Storage
     </h2>

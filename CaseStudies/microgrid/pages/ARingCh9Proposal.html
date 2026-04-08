@@ -12,7 +12,7 @@
     textarea {vertical-align: top; padding: 5px;}
     .button {font-size: 16px;}
 </style>
-<script>
+<script src="../library/navigation.js">
     function evaluateProposal(form)
     {
         document.getElementById("status").innerHTML = "Submitted";
@@ -25,7 +25,7 @@
 </script>
 </head>
 
-<body>
+<body onload="createHeaderFooter();">
 <form>
 <h3>Renewable Energy Proposal</h3>
 <table>

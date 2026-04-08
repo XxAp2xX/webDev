@@ -18,7 +18,7 @@
     display: flex; justify-content: center;
   }
 </style>
-<script>
+<script src="../library/navigation.js">
   var form;                  // html element
   var altitude;              // solar angle above horizon
   var cosIncidenceAngle;     // perpendicular component of radiation
@@ -86,9 +86,10 @@
     return Math.round(watts);
   } // end findWatts
 </script>
+
 </head>
 
-<body onload="createHeaderFooter()">
+<body onload="createHeaderFooter();">
 <h2>Solar Collector Performance</h2>
 <form>
   Local Latitude (deg):
