@@ -1,0 +1,73 @@
+1. Yvette: 2 1 0
+
+2. Should look something like:
+var count = 1;
+var sum = 0;
+var product = 1;
+
+while (count <= 4) {
+    sum += count;
+    product *= count;
+    count++;
+}
+
+alert("Sum = " + sum);
+alert("Product = " + product);
+
+3. computer points: 1
+
+4. 
+if (quantity % 1 === 0) {
+    // quantity is a whole number
+}
+
+5. You could use the for attribute in <label> and match it to the control’s id, or put the form control inside the <label> element
+
+6. It is more common to give radio buttons the same name attribute because they work as a group. Only one can be selected at a time, and the shared name is wha tcreates the group behavior.
+
+7. True
+
+8.
+for (count = 2; count <= num; count++) {
+    factorial *= count;
+}
+
+9. It would be inappropriate to replace the loop with a for...of loop because for...of is used for looping through the values of an iterable object like an array or string.It is just counting numbers from 2 up to num, not looping through a collection.
+
+10.
+<style>
+fieldset {
+    width: 500px;
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+</style>
+
+<fieldset>
+    <legend>Gender:</legend>
+    <input type="radio" id="male" name="gender">
+    <label for="male">male</label>
+
+    <input type="radio" id="female" name="gender">
+    <label for="female">female</label>
+
+    <input type="radio" id="nonbinary" name="gender">
+    <label for="nonbinary">nonbinary</label>
+
+    <input type="radio" id="notsay" name="gender">
+    <label for="notsay">prefer not to say</label>
+</fieldset>
+
+11. Hyphens are treated like the subtraction operator in JavaScript, so they just take it out and do backgroundColor.
+
+12. you could modify it to use classList.add() and classList.remove() instead of building a super long class string.
+
+13. It is used to control the stacking order of overlapping elements. The higher the z-index, the more priority it will have being in the front.
+
+14.
+a = 11, b = 10
+c = 19, d = 20
