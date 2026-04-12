@@ -40,12 +40,51 @@
   } // end calc
 
   function computeAngles() {
-    // developed in case study at end of next chapter
-  } // end computeAngles
+    var latitude;      // earth latitude
+    var panelSlope;    // angle of solar panels up from horizontal to south
+    var month;         // month number (Jan = 1, Feb = 2, ...)
+    // Using 1985 ASHRAE Fundamentals Guide, Chapter 27, Table 1, and
+    // approximating earth's elliptical orbit as a circle:
+    var solarDeclination;   // solar altitude at north pole in radians
+    var cosAzimuth;         // at noon, this is always either -1.0 or +1.0
+    // Using 1985 ASHRAE Fundamentals Guide, Chapter 27,
+    // equation (3), at noon:
+    var sinAltitude;        // sin(solar altitude)
+
+    latitude = form.elements["latitude"].value * Math.PI/180;
+    panelSlope = form.elements["panelSlope"].value * Math.PI / 180;
+    month = form.elements["months"].selectedIndex + 1;
+    solarDeclination = (-23.45 * Math.PI/180)
+        * Math.cos(month * Math.PI/6);
+    cosAzimuth;   // at noon, this is always either -1.0 or +1.0
+    sinAltitude =
+        Math.cos(latitude) * Math.cos(solarDeclination)
+        + Math.sin(latitude) * Math.sin(solarDeclination);
+    altitude = Math.asin(sinAltitude);
+    if (altitude > 0) {
+        // Using 1985 ASHRAE Fundamentals Guide, Chapter 27,
+        // equation (4), at noon:
+        cosAzimuth =
+            (Math.sin(solarDeclination) - sinAltitude * Math.sin(latitude))
+            / (Math.cos(altitude) * Math.cos(latitude));
+        cosIncidenceAngle = sinAltitude * Math.cos(panelSlope)
+            - cosAzimuth * Math.cos(altitude) * Math.sin(panelSlope);
+        if (cosIncidenceAngle < 0) {
+            cosIncidenceAngle = 0.0;
+        }
+    } // end if altitude > 0
+} // end computeAngles
 
   function findWatts() {
-    // developed in case study at end of next chapter
-  } // end findWatts
+    var ratedWatts;  // maximum panel output in Watts / square meter
+    var watts = 0; // instantaneous Watts / square meter
+    ratedWatts = form.elements["ratedWatts"].value;
+    if (altitude > 0)
+      watts = ratedWatts * 
+        (0.86 * cosIncidenceAngle + 0.14 * Math.sin(altitude));
+    return Math.round(watts);
+  }
+   // end findWatts
 </script>
 </head>
 
