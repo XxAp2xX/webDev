@@ -6,6 +6,7 @@ function createHeaderFooter() {
   var nav = document.createElement("nav");
   var ul = document.createElement("ul");
   var li;
+  var bm;
 
   h1.innerHTML = "Microgrid Development in Lawrence KS";
   header.appendChild(h1);
@@ -25,7 +26,7 @@ function createHeaderFooter() {
   ul.appendChild(li);
   li = getli("services.html", "Electric Power Services");
   ul.appendChild(li);
-  li = getli("#", "Downtown Properties");
+  li = getli("properties.html", "Downtown Properties");
   ul.appendChild(li);
   li = getli("#", "Solar Shadowing");
   ul.appendChild(li);
@@ -37,7 +38,7 @@ function createHeaderFooter() {
   ul = document.createElement("ul");      // for another unordered list
   li = getli("#", "Top");
   ul.appendChild(li);
-  li = getli("index.html", "Home");
+  li = getli("areaDescription.html", "Home");
   ul.appendChild(li);
   nav.appendChild(ul);
   footer.appendChild(nav);

@@ -31,4 +31,5 @@ nav li {
 }
 nav a {text-decoration: none;}
 
-h2 {margin-top: -15px;}
+/* Rule for form's input styles */  
+input {margin: 2px 15px 2px 2px;}

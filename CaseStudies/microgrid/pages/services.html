@@ -8,17 +8,33 @@
 <script src="../library/navigation.js"></script>
 <style>
   aside {
-    float: right; width: 50%; margin: 0px 20px; font-size: small;
+    float:right;
+    width: 50%;
+    margin: 0px 20px;
+    font-size: small;
   }
-  form {margin: auto 30px;}
-  fieldset {text-align: center; background-color: white;}
-  input {text-align: center; font-weight: bold;}
-  p {margin: 20px auto;}
-  span {font-style:italic;}
+  form {
+    margin: auto 30px;
+  }
+  fieldset {
+    text-align: center;
+    background-color: white;
+  }
+  .volatile {
+    padding-left: 5px;
+    text-align: left;
+    font-weight: bold;
+  }
+  p {
+    margin: 20px auto;
+  }
+  span {
+    font-style:italic;
+  }
 </style>
 <script>
   var oldParagraphId = "Lighting";   // could be any paragraph
-  var originalColor;                 // a constant
+  var originalColor;                 // original color
 
   function initializeColor() {
     originalColor =
@@ -59,7 +75,7 @@
 </script>
 </head>
 
-<body onload="createHeaderFooter(), initializeColor();">
+<body onload="createHeaderFooter(), initializeColor()">
 <h2>Electric Power Services</h2>
 <aside>
   <h3>Instructions for Interaction:</h3>
@@ -84,8 +100,10 @@
     "highlight('Power_Conditioning')">  Power Conditioning<br><br>
   <fieldset>
     <legend>technology and aspect</legend>
-    <input type="text" id="technology" readonly>
-    <input type="text" id="aspect" readonly>
+    <input type="text" id="technology" class="volatile" readonly
+      ="readonly">
+    <input type="text" id="aspect" class="volatile" readonly
+      ="readonly">
   </fieldset><br>
 </form>
 <p id="Lighting" title="Lighting">
