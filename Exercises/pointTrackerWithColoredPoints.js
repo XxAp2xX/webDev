@@ -10,7 +10,7 @@ class Point {
     this.#x = x;
     this.#y = y;
 
-    // Assign colors in the order: red → green → blue → repeat
+    // Assigns colors in the order: red -> green -> blue -> repeat
     if (Point.#colorIndex === 0) {
       this.#color = "red";
     }
@@ -61,8 +61,7 @@ class Point {
     return (Point.#count === undefined) ? 0 : Point.#count;
   } // end getCount
 
-  // Return the distance between two points or null if
-  // two points have not yet been created.
+  // Return the distance between two points or null if two points have not yet been created.
   static distance(pt1, pt2) {
     var xDist, yDist;
     var distance = null;
