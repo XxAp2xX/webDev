@@ -1,0 +1,120 @@
+1. Inside an object method or class method, "this" refers to the current object. Inside a constructor, "this" refers to the newlu created object being initialized.
+
+2a. avgAge is mean to belong to the Human class as a whole, not to one specific Human object.
+2b. 
+if (Human.avgAge === undefined) {
+    Human.avgAge = age;
+}
+
+3. The things needed to be changed would be:
+In the constructor, change the count updates to go from 0 -> 1 -> 2
+In getCount(), just return Point.#count
+In reduceCount(), change the count updates to go from 2 -> 1 and 1 -> 0
+
+4. See pointTrackerWithColoredPoints.html & pointTrackerWithColoredPoints.js
+5. See pointTrackerWithColoredPoints.html & pointTrackerWithColoredPoints.js
+
+6. iAgree.addEventListener("change", agree);
+
+7. 
+const favoriteBook = {
+    author: "F. Scott Fitzgerald",
+    title: "The Great Gatsby",
+    amazonRating: 4.4
+};
+
+8. 
+class PartTime extends Employee {
+    #hourlyPay;   // hourly wage
+
+    constructor(name, id, hourlyPay) {
+        super(name, id);
+        this.#hourlyPay = hourlyPay;
+    } // end constructor
+
+    getHourlyPay() {
+        return this.#hourlyPay;
+    }
+} // end class PartTime
+
+9. msg = cuatro dos tres cuatro uno 
+
+10. 
+let deck = [];
+
+for (let suit of ["C", "D", "H", "S"]) {
+    for (let value = 1; value <= 13; value++) {
+        deck.push(value + suit);
+    }
+}
+
+console.log("deck = " + deck);
+
+11. Improved Version:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="John Dean">
+<title>Stunt Group</title>
+<script>
+class Cheerleader {
+    #name;
+    #height;
+
+    constructor(name, height) {
+        this.#name = name;
+        this.#height = height;
+    }
+
+    getName() {
+        return this.#name;
+    }
+
+    getHeight() {
+        return this.#height;
+    }
+}
+
+var stuntGroup = [];
+
+function addCheerleader() {
+    let name = document.getElementById("cheerleader").value;
+    let height = Number(document.getElementById("height").value);
+
+    stuntGroup.push(new Cheerleader(name, height));
+
+    stuntGroup.sort(function(a, b) {
+        return a.getHeight() - b.getHeight();
+    });
+}
+
+function displayStuntGroup() {
+    let namesColumn = "";
+
+    for (let i = 0; i < stuntGroup.length; i++) {
+        namesColumn += stuntGroup[i].getName() + " - "
+            + stuntGroup[i].getHeight() + " cm<br>";
+    }
+
+    document.getElementById("stunt-group").innerHTML = namesColumn;
+}
+</script>
+</head>
+<body>
+<input type="text" id="cheerleader" placeholder="Name">
+<br>
+<input type="number" id="height" placeholder="Height in cm">
+<br>
+<input type="button" value="Add cheerleader"
+    onclick="addCheerleader();">
+<br><br>
+<input type="button" value="Display stunt group"
+    onclick="displayStuntGroup();">
+<div id="stunt-group"></div>
+</body>
+</html>
+
+12. It always returns 0, so it is always going to say that they are equal and not change the order.
+
+13. dns
