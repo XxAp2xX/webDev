@@ -1,0 +1,31 @@
+FINAL PROJECT PLANS
+
+1. Website Structure
+/project
+index.php
+login.php
+dashboard.php
+/css
+/js
+/images
+2. HTML Requirements
+
+3. CSS Requirements
+
+4. JavaScript Requirements
+
+5. Backend: PHP & MySQL Login System
+
+6. Accessibility & Responsiveness
+
+7. Deployment / Hosting
+
+8. Navigation & User Experience
+
+9. Coding Conventions & Comments
+
+10. Presentation
+
+11. Extra Credit
+
+12. Other
